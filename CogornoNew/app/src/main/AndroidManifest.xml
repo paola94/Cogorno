@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.paola.cogornonew">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/comune_di_cogorno"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Registrati"
+            android:label="@string/registrati"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Login"
+            android:label="@string/login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DatiDiBase"
+            android:label="Dati di Base"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Schede"
+            android:label="@string/title_activity_schede"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".RisorseDisponibili"
+            android:label="Risorse Disponibili"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SegnaleticaEAreeEmergenza"
+            android:label="Segnaletica e Aree di Emergenza"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ScenariEModelli"
+            android:label="Scenari e Modelli"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Email"
+            android:label="@string/title_activity_email"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Amministratore"
+            android:label="@string/title_activity_amministratore"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_home"
+                android:icon= "@drawable/ic_home_black_24dp"
+                android:title="@string/Home"
+                />
+        </menu>
+    </item>
+
+
+    <item android:title="@string/accesso">
+        <menu>
+            <item
+                android:id="@+id/nav_registrati"
+                android:icon="@drawable/ic_create_black_24dp"
+                android:title="@string/registrati" />
+            <item
+                android:id="@+id/nav_login"
+                android:icon="@mipmap/ic_account_circle_black_24dp"
+                android:title="@string/login" />
+
+        </menu>
+    </item>
+
+    <item android:title="@string/piano_di_emergenza_comunale">
+
+        <menu android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_dat_di_base"
+                android:icon="@drawable/ic_menu_upload"
+                android:title="@string/dati_di_base_del_territorio" />
+
+            <item
+                android:id="@+id/nav_risorse"
+                android:icon="@drawable/ic_menu_upload"
+                android:title="@string/risorse_disponibili" />
+            <item
+                android:id="@+id/nav_segnaletica"
+                android:icon="@drawable/ic_menu_upload"
+                android:title="@string/gestione_segnaletica_e_aree_di_emergenza" />
+            <item
+                android:id="@+id/nav_scenari"
+                android:icon="@drawable/ic_menu_upload"
+                android:title="@string/scenari_di_rischio_e_modelli_di_intervento" />
+
+            <item
+                android:id="@+id/nav_schede"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/schede_di_autoprotezione_per_la_popolazione" />
+
+
+        </menu>
+    </item>
+
+
+
+    <item android:title="Comunicazione">
+        <menu>
+            <item
+                android:id="@+id/nav_chat"
+                android:icon="@mipmap/ic_textsms_black_24dp"
+                android:title="Chat" />
+            <item
+                android:id="@+id/nav_mail"
+                android:icon="@mipmap/ic_mail_black_24dp"
+                android:title="E-mail" />
+        </menu>
+    </item>
+
+</menu>
