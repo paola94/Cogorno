@@ -57,6 +57,7 @@ public class Schede extends AppCompatActivity
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction ft = fragmentManager.beginTransaction();
             ft.replace(R.id.containerSchede, fragment);
+            ft.addToBackStack("myscreen");
             ft.commit();
         }
 

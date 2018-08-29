@@ -377,6 +377,30 @@ public class DataBase {
         return false;
     }
 
+    public List<UtenteAut> getUtentiAut(){
+        this.openReadableDB();
+        Cursor cursor = db.query(UTENTI_AUT_TABLE, null, null, null, null, null, null);
+        List<UtenteAut> utentiAut = new ArrayList<>();
+        while (cursor.moveToNext()) {
+            utentiAut.add(getUtenteAutFromCursor(cursor));
+        }
+        if (cursor != null) {
+            cursor.close();
+        }
+        this.closeDB();
+        return utentiAut;
+    }
+
+    public int cancellaUtenteAut(UtenteAut utenteAut){
+        String where = UTENTI_AUT_COGNOME + "= ? AND " + UTENTI_AUT_NOME + "= ? AND " + UTENTI_AUT_RUOLO + "= ?";
+        String[] whereArgs = {utenteAut.getCognome_utenteAut(), utenteAut.getNome_utenteAut(), utenteAut.getRuolo_utenteAut()};
+        this.openWritableDB();
+        int row = db.delete(UTENTI_AUT_TABLE, where, whereArgs);
+        this.closeDB();
+        return row;
+    }
+
+
     private static UtenteAut getUtenteAutFromCursor(Cursor cursor) {
         if (cursor == null || cursor.getCount() == 0) {
             return null;

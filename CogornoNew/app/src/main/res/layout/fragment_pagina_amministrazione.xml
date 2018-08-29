@@ -59,6 +59,24 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
+            <Button
+                android:id="@+id/btn_TuttiUtentiAut"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/visualizza_tutti_gli_utenti_autorizzati"
+                android:background="@drawable/button_dati_di_base"
+                android:textColor="#E8E8E8"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_loginAmm" />
+
             <EditText
                 android:id="@+id/et_usernameAmm"
                 android:layout_width="wrap_content"
@@ -130,6 +148,24 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView37" />
 
             <Button
+                android:id="@+id/btn_eliminaUtenteAut"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/button_dati_di_base"
+                android:text="@string/elimina_utente_autorizzato"
+                android:textColor="#E8E8E8"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_aggiungiUtente" />
+
+            <Button
                 android:id="@+id/btn_esciAmm"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
@@ -137,7 +173,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="32dp"
                 android:background="@drawable/button_dati_di_base"
                 android:text="@string/esci"
                 android:textColor="#E8E8E8"
@@ -145,7 +181,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_aggiungiUtente" />
+                app:layout_constraintTop_toBottomOf="@+id/btn_eliminaUtenteAut" />
 
             <Button
                 android:id="@+id/btn_aggiungiUtente"
@@ -163,7 +199,7 @@
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_loginAmm" />
+                app:layout_constraintTop_toBottomOf="@+id/btn_TuttiUtentiAut" />
 
         </android.support.constraint.ConstraintLayout>
     </ScrollView>

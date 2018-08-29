@@ -18,30 +18,33 @@ public class PopolaDB {
         db.popolaVie(5, "PIAZZA INNOCENZO", 1);
         db.popolaVie(6, "VIA ROSSI", 1);
         db.popolaVie(7, "VIA XXV APRILE", 1);
+        db.popolaVie(8, "VIA SAN MARTINO",1);
 
         // strutture
         db.popolaStruttura(3, "sede comunale", 2, 1, "comune");
         db.popolaStruttura(4, "ufficio ass soc", 3, 1, "ufficio ass soc");
-        db.popolaStruttura(5, "SERVIZIO DI EDUCATORIE DOMICILIARIE", 4, 1, "scuola");
+        db.popolaStruttura(5, "SCUOLA PRIMARIA 'N.ROCCA' DI SAN SALVATORE", 3, 1, "scuola");
         db.popolaStruttura(6, "SCUOLA MATERNA (INFANZIA) STATALE 'B.CHIAPPE' DI COGORNO", 1, 1, "scuola");
         db.popolaStruttura(7, "BASILICA SAN SALVATORE DEI FIESCHI", 5, 1, "culto");
         db.popolaStruttura(8, "AUDITORIUM SAN SALVATORE DEI FIESCHI", 5, 1, "culto");
         db.popolaStruttura(9, "IMPRESA EDILE DI PAOLO", 6, 1, "imprese");
         db.popolaStruttura(10, "FERRAMENTA", 7, 1, "approvvigionamento");
         db.popolaStruttura(11, "VILLAGGIO DEL RAGAZZO", 4,1,"scuola");
+        db.popolaStruttura(12,"ORATORIO SAN MARTINO",8,1,"culto");
 
         // dati comune
         db.popolaComune(1, "Cogorno");
         db.popolaSedeComunale(1, 3, "38 m s.l.m. (min 8 - max 701)", "44°19'48,72''N", "9°21'14,40''E", "44,3302°N", "9,3540°E");
         db.popolaPopolazione(1, 3, "residenti", "5646", "residenti");
-        db.popolaPopolazione(2, 5, "alunni", "16", "alunni");
+        db.popolaPopolazione(2, 5, "alunni", "114", "alunni");
         db.popolaPopolazione(3, 6, "alunni", "27", "alunni");
-        db.popolaPopolazione(4, 5, "personale", "4", "personale");
+        db.popolaPopolazione(4, 5, "personale", "11", "personale");
         db.popolaPopolazione(5, 6, "personale", "2", "maestre");
         db.popolaPopolazione(6, 6, "personale", "1", "bidella");
         db.popolaPopolazione(7, 6, "personale", "1", "cuoco");
         db.popolaPopolazione(8,11, "personale", "40","personale");
         db.popolaPopolazione(9,11,"alunni", "270","alunni");
+
 
         // contatti comune
         db.popolaContatti(1, 3, "sede comunale", "", "telefono", "018538571");
@@ -58,15 +61,17 @@ public class PopolaDB {
         db.popolaContatti(7, 4, "Ufficio Assistente Sociale", "","telefono", "0185385020");
 
         // contatti scuole
-        db.popolaContatti(8, 5, "Paolo","Rossi", "telefono", "1234567");
-        db.popolaContatti(9, 5, "Marco", "Bianchi", "telefono", "987654");
-        db.popolaContatti(10, 6, "Davide","Verdi", "telefono", "01234");
+        db.popolaContatti(8, 5, "Segreteria","", "telefono", "1234567");
+        db.popolaContatti(9, 5, "Segreteria", "", "email", "scuola@istruzione.it");
+        db.popolaContatti(10, 6, "Maestra Paola","Sanguineti", "telefono", "01234567");
         db.popolaContatti(11, 5, "Segreteria", "","email", "servizioeducatorie@gmail.com");
         db.popolaContatti(16,11,"Direttore","", "telefono", "018512345");
         db.popolaContatti(17,11,"Segreteria","", "telefono", "12345678");
 
         // contatti culto
         db.popolaContatti(12, 7, "Don Maurizio", "","cell", "1234567");
+        db.popolaContatti(16,8, "Don Maurizio","", "cell", "1234567");
+        db.popolaContatti(17,12, "Caffarena", "Priore", "cell", "123456");
 
         // contatti imprese
         db.popolaContatti(13, 9, "Titolare impresa","", "telefono", "1234556");
@@ -76,14 +81,15 @@ public class PopolaDB {
         db.popolaContatti(15, 10, "Ferramenta", "","telefono", "26128191");
 
         // personale
-        db.popolaPersonale(1, "PIPPO","PLUTO", "LAVORI PUBBLICI E AMBIENTE", "Chiavari", "123456789", "personale");
-        db.popolaPersonale(2, "TOPOLINO","PAPERINO", "POLIZIA MUNICIPALE", "Cogorno", "987654321", "personale");
+        db.popolaPersonale(1, "Enrica","Sommariva", "SINDACO", "Cogorno", "123456", "personale");
+        db.popolaPersonale(2, "Luigi","Mazzino", "Vice Sindaco", "Cogorno", "987654321", "personale");
         db.popolaPersonale(3, "GIANNI","ROSSI", "DIRETTORE OPERATIVO", "chiavari", "123467890", "protezione civile");
         db.popolaPersonale(4, "CARLO","BIANCHI", "GEOLOGO", "Sestri Levante", "65837348", "professionisti");
         db.popolaPersonale(5, "ANNA","ROSSI", "MEDICO PRIVATO", "", "93012901", "sanita");
         db.popolaPersonale(6, "DITTA CARTELLI","SIG.ROSSI", "MANUTENTORE HARDWARE", "Via Pastrengo - Bergamo", "12345678", "cartelli");
         db.popolaPersonale(7, "SOVR.TE","CAPO PM", "OPERATORI PER MESSAGGI", "postazione ufficio pm", "23243567", "cartelli");
         db.popolaPersonale(8,"PAOLO","VERDI", "VOLONTARIO","cogorno","1234567","protezione civile");
+        db.popolaPersonale(9,"Davide", "Ratto","Lavori pubblici e ambiente","Chiavari", "1234567", "personale");
 
         // mezzi
         db.popolaMezzi(1, "n.1", "Fiat 600", "Sede comunale", "Esclusiva", "ab123cd", "comune");

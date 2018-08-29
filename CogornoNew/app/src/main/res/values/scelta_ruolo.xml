@@ -2,6 +2,7 @@
 <resources>
     <string-array name="scelta">
         <item>Sindaco</item>
+        <item>Vice Sindaco</item>
         <item>Consigliere</item>
         <item>Polizia Municipale</item>
         <item>Volontario</item>

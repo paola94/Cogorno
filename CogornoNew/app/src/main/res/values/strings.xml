@@ -56,31 +56,24 @@
     <string name="tel_fax">Tel/Fax</string>
     <string name="indirizzo_sito_internet">Indirizzo Sito Internet</string>
     <string name="indirizzo_sede_comunale">INDIRIZZO SEDE COMUNALE</string>
-    <string name="polizia_municipale_c_o_sede_comunale">POLIZIA MUNICIPALE c/o sede comunale</string>
-    <string name="indirizzo_uffici_comunali_distaccati">Indirizzo Uffici Comunali distaccati</string>
+    <string name="polizia_municipale_c_o_sede_comunale">POLIZIA MUNICIPALE c/o SEDE COMUNALE</string>
+    <string name="indirizzo_uffici_comunali_distaccati">INDIRIZZO UFFICI COMUNALI DISTACCATI</string>
     <string name="ufficio_assistenti_sociali">Ufficio Assistenti Sociali</string>
     <string name="cell">Cell</string>
     <string name="indirizzo">Indirizzo</string>
-    <string name="popolazione">Popolazione</string>
+    <string name="popolazione">POPOLAZIONE</string>
     <string name="totale_residenti">Totale Residenti</string>
-    <string name="coordinate_geografiche">coordinate_geografiche</string>
-    <string name="altitudine">altitudine</string>
-    <string name="sistema_decimale">Sistema Decimale</string>
-    <string name="sistema_sessagesimale">Sistema Sessagesimale</string>
+    <string name="coordinate_geografiche">COORDINATE GEOGRAFICHE</string>
+    <string name="altitudine">ALTITUDINE</string>
+    <string name="sistema_decimale">SISTEMA DECIMALE</string>
+    <string name="sistema_sessagesimale">SISTEMA SESSAGESIMALE</string>
     <string name="latitudine_nord">Latitudine Nord</string>
     <string name="longitudine_est">Longitudine Est</string>
     <string name="latitudine">Latitudine</string>
     <string name="longitudine">Longitudine</string>
-    <string name="descrizione_accessi">Il territorio del Comune di Cogorno è ubicato sul versante orografico sinistro del Fiume Entella e può essere distinto sostanzialmente nella piana alluvionale associata al fiume ed ai pendii che risalgono in direzione Est.
-    Su fondovalle è presente un\'urbanizzazione discretamente compatta mentre in collina si riscontrano piccole frazioni e, soprattutto, insediamenti sparsi.
-    Conseguentemente a tale condizione morfologica, l\'accessibilità alle varie frazioni per controlli, verifiche, interventi in emergenza, soccorsi, dovranno tenere in debito conto delle vie di penetrazione per giungere alle varie parti del territorio e alle varie frazioni nonchè alle alternative possibili.
-    Le carte tematiche allegate al presente Piano indicano le principali viabilità entro il territorio comunale.</string>
     <string name="n_indicativo_alunni">N. Indicativo Alunni</string>
     <string name="n_indicativo_personale">N. Indicativo personale</string>
     <string name="contatti">Contatti</string>
-    <string name="disabili">In situazioni di emergenza è importante avere un quadro informativo chiaro e dettagliato delle presenze vulnerabili e la loro localizzazione sul territorio, in modo da poter attuare un\'azione mirata di soccorso.
-    In tale prospettiva è allegato al presente Piano un elenco esaustivo fornito dall\'Assistente Sociale del Comune, contenente i nominativi e i recapiti delle persone disabili e/o non autosufficienti.
-    Tale documento deve essere consultabile dal centro operativo che gestisce l\'emergenza.</string>
     <string name="title_activity_schede">Schede</string>
     <string name="title_activity_risorse_disponibili">RisorseDisponibili</string>
     <string name="personale_apicale">Personale Apicale</string>
@@ -114,7 +107,7 @@
     <string name="manutentore_hardware">Manutentore - Hardware</string>
     <string name="operatori_per_messaggi">Gestione messaggistica</string>
     <string name="title_activity_scenari_emodelli">ScenariEModelli</string>
-    <string name="evento_alluvionale">Evento Alluvionale</string>
+    <string name="evento_alluvionale">Evento Alluvionale e Frane</string>
     <string name="evento_sismico">Evento sismico</string>
     <string name="evento_nivologico">Evento Nivologico</string>
     <string name="rischio_incendi">Rischio Incendi</string>
@@ -136,7 +129,7 @@
     <string name="filtra_per_via">Filtra per via</string>
     <string name="inserisci_via">Inserisci via</string>
     <string name="bottonecerca">bottoneCerca</string>
-    <string name="amministratore">Amministratore</string>
+    <string name="amministratore">Admin</string>
     <string name="title_activity_amministratore">Amministratore</string>
     <string name="login_amministratore">Login Amministratore</string>
     <string name="esci">Esci</string>
@@ -144,4 +137,7 @@
     <string name="inserisci_il_nome">Inserisci il nome</string>
     <string name="inserisci_il_cognome">Inserisci il cognome</string>
     <string name="aggiungi">Aggiungi</string>
+    <string name="elimina_utente_autorizzato">Elimina Utente Autorizzato</string>
+    <string name="visualizza_tutti_gli_utenti_autorizzati">Visualizza tutti gli utenti autorizzati</string>
+    <string name="utenti_autorizzati">Utenti autorizzati</string>
 </resources>

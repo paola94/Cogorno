@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         db = new DataBase(this);
 
-        Utente utenteAmm = new Utente("paola","silvestre","amministratore","paola", "Paola94");
+        Utente utenteAmm = new Utente("admin","password","amministratore","admin", "password");
 
         db.inserisciUtente(utenteAmm);
 
