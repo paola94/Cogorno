@@ -400,6 +400,15 @@ public class DataBase {
         return row;
     }
 
+    public int cancellaUtente(String nome, String cognome, String ruolo){
+        String where = UTENTI_COGNOME + "= ? AND " + UTENTI_NOME + "= ? AND " + UTENTI_RUOLO + "= ?";
+        String[] whereArgs = {cognome.toUpperCase(), nome.toUpperCase(), ruolo.toUpperCase()};
+        this.openWritableDB();
+        int row = db.delete(UTENTI_TABLE, where, whereArgs);
+        this.closeDB();
+        return row;
+    }
+
 
     private static UtenteAut getUtenteAutFromCursor(Cursor cursor) {
         if (cursor == null || cursor.getCount() == 0) {

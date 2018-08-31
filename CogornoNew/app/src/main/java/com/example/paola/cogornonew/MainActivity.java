@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity
         btnChat.setOnClickListener(this);
 
         if(sessione.loggedIn()){
-            makeToast("sei già loggato");
+            //makeToast("sei già loggato");
             btn_login.setText("LOGOUT");
         }
 

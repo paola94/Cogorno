@@ -71,9 +71,12 @@ public class VisualizzaUtentiAut extends Fragment implements View.OnClickListene
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        final String Nome = utentiAut.get(position).getNome_utenteAut();
+        final String Cognome = utentiAut.get(position).getCognome_utenteAut();
+        final String Ruolo = utentiAut.get(position).getRuolo_utenteAut();
 
         if(tipo.equals("elimina")){
-            final UtenteAut utenteAut = new UtenteAut(utentiAut.get(position). getNome_utenteAut(),utentiAut.get(position).getCognome_utenteAut(),utentiAut.get(position).getRuolo_utenteAut());
+            final UtenteAut utenteAut = new UtenteAut(Nome,Cognome,Ruolo);
             AlertDialog.Builder builder;
             builder = new AlertDialog.Builder(getContext());
             builder.setTitle("Attenzione")
@@ -84,18 +87,21 @@ public class VisualizzaUtentiAut extends Fragment implements View.OnClickListene
                         public void onClick(DialogInterface dialog, int which) {
                             // funzione di elimina nel db
                             int elimina = db.cancellaUtenteAut(utenteAut);
+                            int eliminaUtente = db.cancellaUtente(Nome, Cognome, Ruolo);
                             if(elimina > 0){
-                                Toast.makeText(getContext(),"Eliminazione avvenuta con successo", Toast.LENGTH_SHORT).show();
-                                Fragment fragment = new VisualizzaUtentiAut();
-                                Bundle args = new Bundle();
-                                args.putString("tipo", "elimina");
-                                fragment.setArguments(args);
-                                if (fragment != null) {
-                                    FragmentManager fragmentManager = getFragmentManager();
-                                    FragmentTransaction ft = fragmentManager.beginTransaction();
-                                    ft.replace(R.id.containerAmministratore, fragment);
-                                    ft.addToBackStack("myscreen");
-                                    ft.commit();
+                                if(eliminaUtente > 0) {
+                                    Toast.makeText(getContext(), "Eliminazione avvenuta con successo", Toast.LENGTH_SHORT).show();
+                                    Fragment fragment = new VisualizzaUtentiAut();
+                                    Bundle args = new Bundle();
+                                    args.putString("tipo", "elimina");
+                                    fragment.setArguments(args);
+                                    if (fragment != null) {
+                                        FragmentManager fragmentManager = getFragmentManager();
+                                        FragmentTransaction ft = fragmentManager.beginTransaction();
+                                        ft.replace(R.id.containerAmministratore, fragment);
+                                        ft.addToBackStack("myscreen");
+                                        ft.commit();
+                                    }
                                 }
                             }
                         }

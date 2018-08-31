@@ -50,7 +50,7 @@ public class RischiModelliFragment extends Fragment implements View.OnClickListe
 
 
         switch (tipoEvento){
-            case "Evento Alluvionale":
+            case "Evento Alluvionale e Frane":
                 nomeScenari = "cap.5ScenariAlluvione.pdf";
                 nomeModelli = "cap.12ModelliAlluvione.pdf";
                 nomePost = "cap.12PostAlluvione.pdf";

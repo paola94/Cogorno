@@ -252,7 +252,7 @@ public class FiltroPersonale extends Fragment implements View.OnClickListener{
             ft.addToBackStack("myscreen");
             ft.commit();
         }
-        Toast.makeText(getActivity(), "dentro risorse diponibili fragment", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity(), "dentro risorse diponibili fragment", Toast.LENGTH_SHORT).show();
 
     }
 }

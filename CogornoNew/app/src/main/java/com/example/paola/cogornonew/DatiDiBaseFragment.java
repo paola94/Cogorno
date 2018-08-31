@@ -143,7 +143,7 @@ public class DatiDiBaseFragment extends Fragment implements View.OnClickListener
                     ft.addToBackStack("myscreen");
                     ft.commit();
                 }
-                Toast.makeText(getActivity(), "dentro dati di base fragment", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), "dentro dati di base fragment", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.btn_culto:
@@ -159,7 +159,7 @@ public class DatiDiBaseFragment extends Fragment implements View.OnClickListener
                     ft.addToBackStack("myscreen");
                     ft.commit();
                 }
-                Toast.makeText(getActivity(), "dentro dati di base fragment", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), "dentro dati di base fragment", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.btn_disabili:
@@ -174,7 +174,7 @@ public class DatiDiBaseFragment extends Fragment implements View.OnClickListener
                     ft.addToBackStack("myscreen");
                     ft.commit();
                 }
-                Toast.makeText(getActivity(), "dentro dati di base fragment", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), "dentro dati di base fragment", Toast.LENGTH_SHORT).show();
                 break;
 
 

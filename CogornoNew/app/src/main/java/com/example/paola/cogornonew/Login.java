@@ -181,7 +181,7 @@ public class Login extends AppCompatActivity
         if(id == R.id.btnLogin){
             Log.d("valori: ", etUsername.getText().toString() + etPassword.getText().toString());
             login();
-            makeToast("loginnnnnnn");
+            makeToast("login avvenuto con successo");
             popolaDB = new PopolaDB(db);
         }
     }

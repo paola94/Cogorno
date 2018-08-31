@@ -1,8 +1,10 @@
 package com.example.paola.cogornonew;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -29,6 +31,9 @@ public class Schede extends AppCompatActivity
 
     private Sessione sessione;
 
+    private KillReceiver clearActivityStack;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,21 +49,33 @@ public class Schede extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        MenuItem item = navigationView.getMenu().findItem(R.id.nav_login);
+        sessione = new Sessione(this);
+        if(sessione.loggedIn()) {
+            item.setTitle("Logout");
+            Log.d("cambiomenu", "in logout");
+        }else {
+            item.setTitle("Login");
+        }
+
         navigationView.setNavigationItemSelectedListener(this);
 
-        sessione = new Sessione(this);
+        clearActivityStack = new KillReceiver();
+        registerReceiver(clearActivityStack, IntentFilter.create("clearStackActivity", "text/plain"));
 
         Fragment fragment = new ScenariEModelliFragment();
         Bundle args = new Bundle();
         args.putString("nomePagina", "Schede di autoprotezione per la popolazione");
         args.putString("tipo", "schede");
         fragment.setArguments(args);
-        if (fragment != null) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            FragmentTransaction ft = fragmentManager.beginTransaction();
-            ft.replace(R.id.containerSchede, fragment);
-            ft.addToBackStack("myscreen");
-            ft.commit();
+        if(savedInstanceState == null) {
+            if (fragment != null) {
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction ft = fragmentManager.beginTransaction();
+                ft.replace(R.id.containerSchede, fragment);
+                //ft.addToBackStack("myscreen");
+                ft.commit();
+            }
         }
 
 
@@ -220,6 +237,10 @@ public class Schede extends AppCompatActivity
     }
 
     public void goToMainActivity(){
+        Intent intent = new Intent("clearStackActivity");
+        intent.setType("text/plain");
+        sendBroadcast(intent);
+
         Intent intent_home = new Intent(Schede.this, MainActivity.class);
         startActivity(intent_home);
     }
@@ -308,5 +329,13 @@ public class Schede extends AppCompatActivity
                 })
                 .setIcon(R.drawable.danger)
                 .show();
+        }
+
+    private final class KillReceiver extends BroadcastReceiver {
+
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            finish();
+        }
     }
 }

@@ -127,7 +127,7 @@ public class RisorseDisponibiliFragment extends Fragment implements View.OnClick
             ft.addToBackStack("myscreen");
             ft.commit();
         }
-        Toast.makeText(getActivity(), "dentro risorse diponibili fragment", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getActivity(), "dentro risorse diponibili fragment", Toast.LENGTH_SHORT).show();
 
     }
 }

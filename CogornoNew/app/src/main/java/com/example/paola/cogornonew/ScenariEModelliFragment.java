@@ -144,6 +144,7 @@ public class ScenariEModelliFragment extends Fragment implements View.OnClickLis
             FragmentManager fragmentManager = getFragmentManager();
             FragmentTransaction ft = fragmentManager.beginTransaction();
             ft.replace(R.id.containerSchede, fragment);
+            ft.addToBackStack("myscreen");
             ft.commit();
         }
     }
